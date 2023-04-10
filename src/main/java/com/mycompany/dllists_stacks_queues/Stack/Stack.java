@@ -32,4 +32,16 @@ class Stack {
    public void print() {
       linkedList.printList();
    }
+   
+   public boolean isEmpty(){
+       if(linkedList.getSize() == 0){
+           return true;
+       }
+       
+       return false;
+   }
+   
+   public int getSize(){
+       return linkedList.getSize();
+   }
 }

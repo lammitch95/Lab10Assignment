@@ -35,5 +35,18 @@ public class DoublyLinkedListDemoApp {
       // Output final list
       System.out.print("List after removing nodes: ");
       numList.printList();
+      
+      int[] num = numList.toArray();
+      System.out.print("Array: ");
+      for(int i = 0; i < num.length; i++){
+          System.out.print(num[i] + " ");
+      }
+      System.out.println();
+      System.out.println("Index: " + numList.indexOf(20));
+      System.out.println("Index: " + numList.indexOf(3));
+      
+      System.out.println("Sum of last 2 elements in DoubleLinkedList: " + numList.sumOfLastElements(2));
+      System.out.println("Sum of last 2 elements in SinglyLinkedList: " + numList.sumOfLastElements2(2));
+
    }
 }

@@ -18,10 +18,12 @@ class Node {
 class LinkedList {
    private Node head;
    private Node tail;
+   private int size;
     
    public LinkedList() {
       head = null;
       tail = null;
+      size = 0;
    }
     
    public void append(Node newNode) {
@@ -33,6 +35,7 @@ class LinkedList {
          tail.next = newNode;
          tail = newNode;
       }
+      size++;
    }
    
    public void prepend(Node newNode) {
@@ -44,6 +47,7 @@ class LinkedList {
          newNode.next = head;
          head = newNode;
       }
+      size++;
    }
    
    public void printList() {
@@ -88,11 +92,17 @@ class LinkedList {
             tail = currentNode;
          }
       }
+      
+      size--;
    }
    
    
    // Added for Stack/Queue section
    public int getHeadData() {
       return head.data;
+   }
+   
+   public int getSize(){
+       return size;
    }
 }
